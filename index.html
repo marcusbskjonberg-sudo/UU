@@ -11,16 +11,16 @@
     <meta charset="utf-8">
     <!-- bevisst: blokkerer zoom (dårlig for UU) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hjem</title> <!-- bevisst: vag tittel -->
-    <link rel="stylesheet" href="style.css">
+    <title>Forside for verdens beste nettside</title> <!-- bevisst: vag tittel -->
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <div class="header">
+    <header>
       <span class="logo" aria-hidden="true"></span> <!-- bevisst: viktig info kun i bilde uten tekstalternativ -->
       <span class="site-title">Min side</span>
-    </div>
+    </header>
 
-    <div class="nav" role="navigation"> <!-- bevisst: upresist role og ingen semantisk <nav> -->
+    <nav> <!-- bevisst: upresist role og ingen semantisk <nav> -->
       <a href="#">Hjem</a>
       <a href="#">Om oss</a>
       <div class="dropdown">
@@ -32,16 +32,14 @@
         </ul>
       </div>
       <a href="#">Kontakt</a>
-    </div>
+    </nav>
 
-    <div class="ticker">
+    <section id="ticker">
       <p>Viktig beskjed: Les dette! Klikk her! Klikk her! Klikk her! Veldig viktig! ✨</p>
-    </div>
+    </section>
 
-    <table class="layout" role="presentation"> <!-- bevisst: tabell for layout -->
-      <tr>
-        <td class="sidebar">
-          <div class="card" id="sekjson">
+    <aside> <!-- bevisst: tabell for layout -->
+          <section>
             <h4>Nyheter</h4> <!-- bevisst: hopper over h1/h2/h3 -->
             <p>
               <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg" alt=""> <!-- bevisst: tom alt på meningsbærende bilde -->
@@ -49,21 +47,23 @@
             </p>
             <p class="status-ok">Tilgjengelig</p>
             <p class="status-bad">Utilgjengelig</p>
-          </div>
+          </section>
 
-          <div class="card">
+          <section>
             <h4>Språk</h4>
             <p>
               <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Norway.svg" alt="no"> <!-- bevisst: alt «no» er ikke beskrivende -->
               <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" alt="en">
             </p>
-          </div>
-        </td>
-        <td>
-          <div class="hero">
+          </section>
+    </aside>
+        
+        <main>
+          <h1>
             VELKOMMEN TIL DEN BESTE SIDEN NOENSINNE (LES VIKTIG TEKST HER OVER BAKGRUNNSBILDE)
-          </div>
+          </h1>
 
+          <section>
           <div class="card shout">
             <div class="narrow">
               Denne teksten er veldig vanskelig å lese fordi den er smal, i store bokstaver og har lav kontrast. Den er også justert med blokkjustering som kan skape store mellomrom i linjene. Klikk her for mer info.
@@ -117,16 +117,16 @@
               <li><a href="#">Les mer</a></li>
             </ul>
           </div>
-        </td>
-      </tr>
-    </table>
+            </section>
+        </main>
+        
 
-    <div style="text-align:center; padding: 10px; background: rgba(255,255,255,0.6)">
+    <footer>
       <!-- bevisst: kontaktinfo kun i bilde uten alt-tekst -->
       <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Facebook_icon.svg">
       <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Twitter_logo.svg">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
       <p style="font-size:10px; color:#bfbfbf">© 2025 ACME</p>
-    </div>
+    </footer>
   </body>
 </html>
